@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_constructors_in_immutables, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
