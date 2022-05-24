@@ -9,4 +9,6 @@ class AppColors {
   static const stroke = Color(0xFFE3E3E6);
   static const shape = Color(0xFFFAFAFC);
   static const background = Color(0xFFFFFFFF);
+
+  static var input;
 }
