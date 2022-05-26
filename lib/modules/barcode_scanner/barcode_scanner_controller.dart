@@ -127,6 +127,7 @@ class BarcodeScannerController {
           } catch (e) {
             print(e);
           }
+          
         }
       });
   }
