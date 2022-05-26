@@ -4,6 +4,7 @@ class BarcodeScannerStatus {
   final bool isCameraAvailable;
   final String error;
   final String barcode;
+  final bool stopScanner;
 
   CameraController? cameraController;
 
@@ -12,6 +13,7 @@ class BarcodeScannerStatus {
     this.cameraController,
     this.error = "",
     this.barcode = "",
+    this.stopScanner = false,
   });
 
   factory BarcodeScannerStatus.available(CameraController controller) =>
