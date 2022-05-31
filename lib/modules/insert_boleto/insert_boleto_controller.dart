@@ -14,4 +14,14 @@ class InsertBoletoController {
 
   String? validateCodigo(String? value) =>
       value?.isEmpty ?? true ? 'O código do boleto não pode ser vazio' : null;
+
+  void onChange(
+      {String? name, String? dueDate, double? value, String? barcode}) {
+        
+      }
+
+  void cadastrarBoleto() {
+    final form = formkey.currentState;
+    if (form!.validate()) {}
+  }
 }
