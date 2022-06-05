@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
@@ -97,8 +97,8 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                         controller: moneyInputTextController,
                         label: 'Valor',
                         icon: FontAwesomeIcons.wallet,
-                        validator: (_) => controller
-                            .validateValor(moneyInputTextController.numberValue),
+                        validator: (_) => controller.validateValor(
+                            moneyInputTextController.numberValue),
                         onChanged: (value) {
                           controller.onChange(
                             value: moneyInputTextController.numberValue,
@@ -129,8 +129,9 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
           Navigator.pop(context);
         },
         secondaryLabel: 'Cadastrar',
-        secondaryOnPressed: () {
-          controller.cadastrarBoleto();
+        secondaryOnPressed: () async {
+          await controller.cadastrarBoleto();
+          Navigator.pop(context);
         },
       ),
     );
